@@ -23,36 +23,20 @@ $(document).ready(function(){
             answer: 0
         }
         
-    ]})
+    ]});
 
     //Initial screen prompting user to start game.
-    $('.startQuiz').on('Click', function(){
-        //When the start or 'ready' button is clicked, questions will appear and timer will start.
-        $('.gameStarted').show();
-    })
+   
+    $('#startQuiz').click(function(){
+        //When user clicks start button the directions and 'ready' button disappears.
+        $('#directions').empty();
+        displayQuestions();
+        console.log('It worked')
+    });
 
+    var displayQuestions = function(){
 
-    //timer appears on screen. play has 60 seconds to answer 5 questions. When timer hits 0 scores are added.
-    var number = 60;
+    };
+    var startTimer = function(){
 
-    function run() {
-        intervalId = setInterval(decrement, 1000);
-    }
-
-    function decrement() {
-
-        number--;
-
-        $("#timeRemaining").html("Time Remaining: " + number);
-
-        if (number === 0) {
-
-        stop();
-
-        alert("Time Up!");
-        }  
-        function stop() {
-
-            clearInterval(intervalId);
-        }
-    }
+    };
