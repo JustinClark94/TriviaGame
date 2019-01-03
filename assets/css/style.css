@@ -1,0 +1,19 @@
+body{
+    
+}
+#wrapper{
+    text-align: center;
+    width: 690px;
+    height: 550px;
+    background: #f1e8cd;
+    padding: 20px;
+    margin: auto;
+   
+    
+}
+#gameTitle{
+    color: #1263a1;
+}
+#timeRemaining{
+    color: #1263a1;
+}
