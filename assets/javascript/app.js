@@ -1,6 +1,10 @@
-$(document).ready(function(){
-    
-    var gameQuestions = [
+//why did doc ready ruin my code? Said my array(s) were undefined. Changes color of the variables.
+//$(document).ready(function(){
+
+   var correctAnswers = 0;
+   var incorrectAnswers = 0;
+   var unansweredAnswers = 0;
+   var gameQuestions = [
         {
             question: 'A common type of radio wave is referred to as VHF. Does do the letters VHF stand for?',
             options: ['Very High Frequency', 'Variable High Frequency', 'Video Homing Frequency'],
@@ -23,7 +27,8 @@ $(document).ready(function(){
             answer: 0
         }
         
-    ]});
+   ];
+
 
     //Initial screen prompting user to start game.
    
@@ -31,12 +36,14 @@ $(document).ready(function(){
         //When user clicks start button the directions and 'ready' button disappears.
         $('#directions').empty();
         displayQuestions();
-        console.log('It worked')
+
     });
 
     var displayQuestions = function(){
+        for (i = 0; i < gameQuestions.length; i++) {
+            $("#triviaQuestion").append("<h2>" + gameQuestions[i].question + "</h2>");
+        for (let j = 0; j < gameQuestions[j].answer.length; j++) {
+            $("#triviaQuestion").append(questionArray[j].answers[j]);
+        }}}
 
-    };
-    var startTimer = function(){
-
-    };
+//)}
