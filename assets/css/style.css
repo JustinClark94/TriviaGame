@@ -1,19 +1,47 @@
 body{
-    
+    background-image: url("../images/background.jpg");
+
 }
+h1,h2,h3{
+    color: #de8882;
+}
+h4,h5,h6{
+    color: #603b35;
+}
+
+button{
+    background-color: #8c3543;
+    border: none;
+    color: #f7f1ec;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#gameTitle{
+background-color: #8c3543;
+color: #f7f1ec;
+padding: 5px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin: 0px;
+}
+
 #wrapper{
     text-align: center;
-    width: 690px;
-    height: 550px;
-    background: #f1e8cd;
-    padding: 20px;
-    margin: auto;
-   
-    
+    background:rgba(255, 255, 255, 0.93);
+    border-radius: 20px;
+    width: 450px;
+    height: 250px;
+    position: fixed;
+    color:  #a49793;
+    overflow: scroll;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-#gameTitle{
-    color: #1263a1;
-}
-#timeRemaining{
-    color: #1263a1;
-}
+

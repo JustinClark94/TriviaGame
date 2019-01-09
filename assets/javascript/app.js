@@ -9,30 +9,30 @@
    var unansweredAnswers = 0;
    var gameQuestions = [
         {
-            question: 'A common type of radio wave is referred to as VHF. Does do the letters VHF stand for?',
-            options: ['Very High Frequency', 'Variable High Frequency', 'Video Homing Frequency'],
+            question: 'Where was coffee first discovered?',
+            options: ['Ethiopia', 'Brazil', 'Columbia'],
             answer: 0,
-            name: 'radio'
+            name: 'discovered'
         },{
-            question: 'If john is facing north and turns 90 degrees to his right, what direction is he facing now?',
-            options: ['South', 'East', 'West'],
+            question: 'Do coffee bushes produce nuts or fruits?',
+            options: ['nuts', 'fruits', 'neither'],
             answer: 1,
-            name: 'john'
+            name: 'caffeine'
         },{
-            question: 'Budapest is the capital of what European country',
-            options: ['Austria', 'Portugal', 'Hungary'],
+            question: 'The two kinds of coffee beans are Arabica and …?',
+            options: ['India', 'Hearty', 'Robusta'],
             answer: 2,
-            name: 'budapest'
+            name: 'popular'
         },{
-            question: 'A prism is a solid figure that has how many congruent bases?',
-            options: ['Two', 'Four', 'Six'],
+            question: 'There are over ___ coffee farmers around the world',
+            options: ['twenty-five million', 'one-hundred-thousand', 'fifty-thousand'],
             answer: 0,
-            name: 'prism'
+            name: 'farmers'
         },{
-            question: 'Which of the following is a homophone for the word "won"?',
-            options: ['One', 'Lost', 'Now'],
+            question: 'Which of these choices has the most caffeine?',
+            options: ['6 ounce cup of black coffee', 'ounce cup of espresso', 'Both choices have the same amount of caffeine'],
             answer: 0,
-            name: 'homophone'
+            name: 'caffeine'
         }
         
    ];
@@ -51,7 +51,7 @@
 
         for (i = 0; i < gameQuestions.length; i++) {
             
-            // $("triviaQuestion").prepend('<div class="' + gameQuestions[i].question + '"></div>')
+            // $("triviaQuestion").prepend('<div class="' + gameQuestions[i].name + '"></div>')
             $("#triviaQuestion").append("<h3>" + gameQuestions[i].question + "</h3>");
             //Loop through question array and create buttons for each answer
             // Clear button div of any newly created buttons
@@ -67,6 +67,7 @@
           
         
         }
+        $("#gameStarted").append("<button id='submit-btn'>Done</button>");
     }
     //
     function startTimer (){
@@ -77,7 +78,7 @@
 
         timer--;
 
-        $("#timeRemaining").html("Time Remaining: " + timer);
+        $("#timeRemaining").html("<h4>Time Remaining: " + timer + "</h4>");
 
         if (timer === 0) {
             alert("Time Up!");
