@@ -3,7 +3,7 @@
 //Timer appears a few seconds after questions appeard. Why is it delayed.
 //Put var back infront of cAnswers function and show what happens.
 //$(document).ready(function(){
-   var timer = 60;
+   var timer = 120;
    var correctAnswers = 0;
    var incorrectAnswers = 0;
    var unansweredAnswers = 0;
@@ -51,23 +51,25 @@
 
         for (i = 0; i < gameQuestions.length; i++) {
             
-            // $("triviaQuestion").prepend('<div class="' + gameQuestions[i].name + '"></div>')
-            $("#triviaQuestion").append("<h3>" + gameQuestions[i].question + "</h3>");
+            $("#triviaQuestion").append("<div>" + gameQuestions[i].question + "</div>");
+            $("#triviaQuestion").append('<div class="' + gameQuestions[i].name + '"></div>');
+            
             //Loop through question array and create buttons for each answer
             // Clear button div of any newly created buttons
-      
+      console.log(i + 'outter loop')
             for (j = 0; j < gameQuestions[i].options.length; j++) {
-               $("#gameStarted").append(
-                "<h3><input type='radio' name='question-"  +
+                console.log(j+ 'inner loop')
+               $(`.${gameQuestions[i].name}`).append(
+                "<div><input type='radio' name='question-"  +
                   i +
                   "' value='" +
                   gameQuestions[i].options[j] +
-                  "''>" + gameQuestions[i].options[j]);
+                  "''</div>" + gameQuestions[i].options[j]);
             }
           
         
         }
-        $("#gameStarted").append("<button id='submit-btn'>Done</button>");
+        $("#answerOptions").append("<button id='submit-btn'>Done</button>");
     }
     //
     function startTimer (){
@@ -75,9 +77,10 @@
     }
     
     function decrement() {
-
+        $("#timeRemaining").empty()
         timer--;
 
+        
         $("#timeRemaining").html("<h4>Time Remaining: " + timer + "</h4>");
 
         if (timer === 0) {
