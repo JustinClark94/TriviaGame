@@ -12,3 +12,6 @@ Done button will not work.
 And I cannot figure out why input is not being compared to the correct answers
 
 Another thing I realized this week was that I still don't have that instint to use semicolons and properly indent my code. That's something I'll be more aware of going forward.
+
+POSSIBLE SOLUTION TO GRADING:
+https://stackoverflow.com/questions/44799808/javascript-test-with-radio-buttons-and-array
